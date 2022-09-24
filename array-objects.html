@@ -26,19 +26,32 @@
 
             let l = array.length;
 
-            for (let i = 0; i < l; i++){
+            console.log("");
+
+            for (let i = 0; i < array.length; i++) {
                 console.log(array[i]);
             }
 
             console.log("");
 
-            for (let i = l-1; i >= 0; i--){
+            for (let i in array) {
                 console.log(array[i]);
+                if (array[i] == "fish") {
+                    console.log("Hay un pez en el array");
+                } else {
+                    console.log(`El animal ${array[i]} no es un pez`);
+                }
             }
 
-            
+            // let aux;
+            let all = "";
 
+            for (let i in array) {
+                // all += array[i] + " ";
+                all = all + array[i] + " ";
+            }
 
+            console.log(all);
 
         }
     </script>
