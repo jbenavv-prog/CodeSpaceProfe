@@ -9,10 +9,7 @@ function primos(x){
         document.write('es primo');
     }else{
         document.write('es compuesto');
-        
-    }
-
-        
+    }        
     
 }
 primos(183323)
