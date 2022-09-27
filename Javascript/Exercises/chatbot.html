@@ -17,7 +17,7 @@
 <body>
     <div class="container-fluid d-flex flex-column justify-content-center">
         <input class="form-control form-control-lg mt-5 saludo col-12" type="text" placeholder="Saluda..."
-            onkeydown="getSaludo(event, 'key')" aria-label=".form-control-lg example">
+            onkeyup="getSaludo(event, 'key')" aria-label=".form-control-lg example">
         <button type="button" class="btn btn-primary mt-3" onclick="getSaludo(event, 'button')">Clic Here!</button>
     </div>
     <script>
@@ -28,11 +28,23 @@
 
         function getSaludo(event, type) {
             if (event.key == "Enter" || type == 'button') {
-                alert("Tecla Enter presionada!");
                 let saludoElement = document.querySelector('.saludo');
                 const saludo = saludoElement.value;
                 console.log(saludo);
                 saludoElement.value = "";
+                let result = "";
+
+                if(saludo == "Holi"){
+                    result = "Holi!!! Como estás?";
+                } else if(saludo == "Hola"){
+                    result = "Hola!, como estás";
+                } else if(saludo == "que mas ps"){
+                    result = "Entonces, que mij@";
+                } else {
+                    result = "Háblame porfa en Español";
+                }
+
+                Swal.fire(result);
             }
         }
     </script>
