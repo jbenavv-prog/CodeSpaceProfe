@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
+    <div class="container-fluid d-flex flex-column justify-content-center">
+        <input class="form-control form-control-lg mt-5 saludo col-12" type="text" placeholder="Saluda..."
+            onkeydown="getSaludo(event, 'key')" aria-label=".form-control-lg example">
+        <button type="button" class="btn btn-primary mt-3" onclick="getSaludo(event, 'button')">Clic Here!</button>
+    </div>
     <script>
-        sAlert();
-        function sAlert(){
-            Swal.fire('Any fool can use a computer');
+        welcome();
+        function welcome() {
+            Swal.fire('Hola! Bienvenido a nuestro ChatBot');
+        }
+
+        function getSaludo(event, type) {
+            if (event.key == "Enter" || type == 'button') {
+                alert("Tecla Enter presionada!");
+                let saludoElement = document.querySelector('.saludo');
+                const saludo = saludoElement.value;
+                console.log(saludo);
+                saludoElement.value = "";
+            }
         }
     </script>
 </body>
+
 </html>
