@@ -29,16 +29,16 @@
         function getSaludo(event, type) {
             if (event.key == "Enter" || type == 'button') {
                 let saludoElement = document.querySelector('.saludo');
-                const saludo = saludoElement.value;
+                const saludo = saludoElement.value.toLowerCase();
                 console.log(saludo);
                 saludoElement.value = "";
                 let result = "";
 
-                if(saludo == "Holi"){
+                if (saludo == minus("Holi")) {
                     result = "Holi!!! Como estás?";
-                } else if(saludo == "Hola"){
-                    result = "Hola!, como estás";
-                } else if(saludo == "que mas ps"){
+                } else if (saludo == minus("Hola")) {
+                    result = minus("Hola!, como estás");
+                } else if (saludo == minus("que mas ps")) {
                     result = "Entonces, que mij@";
                 } else {
                     result = "Háblame porfa en Español";
@@ -46,6 +46,11 @@
 
                 Swal.fire(result);
             }
+        }
+
+        function minus(saludo) {
+            console.log("i am into minus");
+            return saludo.toLowerCase();
         }
     </script>
 </body>
