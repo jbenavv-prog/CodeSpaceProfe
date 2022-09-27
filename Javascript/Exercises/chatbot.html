@@ -19,6 +19,7 @@
         <input class="form-control form-control-lg mt-5 saludo col-12" type="text" placeholder="Saluda..."
             onkeyup="getSaludo(event, 'key')" aria-label=".form-control-lg example">
         <button type="button" class="btn btn-primary mt-3" onclick="getSaludo(event, 'button')">Clic Here!</button>
+        <h3 style="color:red" class="subtitle"></h3>
     </div>
     <script>
         welcome();
@@ -45,6 +46,7 @@
                 }
 
                 Swal.fire(result);
+                document.querySelector(".subtitle").innerHTML = result;
             }
         }
 
@@ -52,6 +54,8 @@
             console.log("i am into minus");
             return saludo.toLowerCase();
         }
+
+
     </script>
 </body>
 
