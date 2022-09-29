@@ -23,7 +23,7 @@
 
 
         function principal(name, rating, subject, body) {
-            const bodyText = body.replaceAll("name", name, "rating", rating);
+            const bodyText = body.replaceAll("name", name);
             const compleText = bodyText.replaceAll("rating", rating);
             console.log(compleText);
         }
