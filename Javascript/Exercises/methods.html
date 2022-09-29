@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = "Jorge"
+        const rating = "5.0";
+
+        const subject = "Felicidades por aprobar el curso de inducción corportativa";
+        const body = "Cordial Saludo name, Has aprobrado el curso de inducción corporativa con puntaje de rating";
+        const emailFrom = "";
+        const emailTo = "";
+        const emailCC = "";
+
+        principal(name, rating, subject, body);
+
+
+        function principal(name, rating, subject, body) {
+            const bodyText = body.replaceAll("name", name, "rating", rating);
+            const compleText = bodyText.replaceAll("rating", rating);
+            console.log(compleText);
+        }
+    </script>
+</body>
+
+</html>
