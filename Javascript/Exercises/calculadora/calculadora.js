@@ -1,5 +1,5 @@
 calc();
 
 function calc(){
-    alert("into Calc function");
+    // alert("into Calc function");
 }
