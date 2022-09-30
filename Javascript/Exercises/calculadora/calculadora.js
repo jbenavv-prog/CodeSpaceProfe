@@ -5,8 +5,15 @@ function calc(operation) {
 
   if (operation == "+") {
     result = firstValue + secondValue;
+  } else if (operation == "-") {
+    result = firstValue - secondValue;
+  } else if (operation == "/") {
+    result = firstValue / secondValue;
+  } else if (operation == "*"){
+    result = firstValue * secondValue;
+  } else if (operation == "^"){
+    result = firstValue ** secondValue;
   }
 
   document.querySelector(".result-cage").value = result;
-
 }
