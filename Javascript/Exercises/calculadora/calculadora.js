@@ -1,5 +1,6 @@
-calc();
 
 function calc(){
-    // alert("into Calc function");
+    alert("into calc");
+    const firstValue = document.querySelector('.first-value').value;
+    console.log(firstValue);
 }
