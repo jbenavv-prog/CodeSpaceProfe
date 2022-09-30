@@ -1,8 +1,12 @@
+function calc(operation) {
+  const firstValue = parseInt(document.querySelector(".first-value").value);
+  const secondValue = parseInt(document.querySelector(".second-value").value);
+  let result = 0;
 
-function calc(operation){
-    alert(operation);
-    const firstValue = document.querySelector('.first-value').value;
-    alert(firstValue);
-    const secondValue = document.querySelector('.second-value').value;
-    alert(secondValue);
+  if (operation == "+") {
+    result = firstValue + secondValue;
+  }
+
+  document.querySelector(".result-cage").value = result;
+
 }
