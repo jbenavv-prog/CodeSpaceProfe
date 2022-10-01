@@ -1,13 +1,21 @@
+firstAlert();
+let cont = 1;
+
 function eleven(e) {
   if (e.key == "Enter") {
     const n = document.querySelector(".input-number").value;
-    let result = "";
-    for (let i = 1; i <= n; i++) {
-      result = result + `<td>${i*11}</td>`
-    }
+    cont++
+    alert(`Ingrese la nota ${cont}`);
 
-    let tableContent = `<tr> ${result} </tr>`;
+    // for(let i = 1; i<=8; i++){
+     
 
-    document.querySelector('.tbody').innerHTML = tableContent;
+    // }
   }
+  }
+
+function firstAlert(){
+  alert("ingrese la nota 1");
 }
+
+
