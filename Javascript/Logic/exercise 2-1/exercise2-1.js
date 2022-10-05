@@ -22,3 +22,5 @@ function fillNotes(note) {
   document.querySelector(".table tbody tr").innerHTML += `<td>${note}</td>`;
   document.querySelector(".input-note").value = "";
 }
+
+// ddd
