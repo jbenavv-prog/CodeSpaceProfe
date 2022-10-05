@@ -13,9 +13,26 @@
 
 <body>
     <div class="container-fluid vh-100 justify-content-center align-items-center d-flex">
-        <div class="app p-5 border border-success"><h1 class="hello-world">Hello World</h1></div>
+        <div class="app p-5 border border-success">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Ingresa Nota</span>
+                <input type="number" class="form-control input-note" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" onkeyup="average(event)">
+            </div>
+            <div class="row">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <h4 class="average-output text-center"></h4>
+            </div>
+        </div>
     </div>
-<script src="exercise2-1.js"></script>
+    <script src="exercise2-1.js"></script>
 </body>
 
 </html>

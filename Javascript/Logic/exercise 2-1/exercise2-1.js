@@ -1,7 +1,24 @@
+let sumNote = 0;
+let contNotes = 0;
 
-prueba();
+function average(e) {
+  if (e.key == "Enter") {
+    const note = Number(document.querySelector(".input-note").value);
 
-function prueba(){
-    alert("before continue");
+    if (note != "") {
+      contNotes++;
+      fillNotes(note);
+      sumNote += note;
+      document.querySelector('.average-output').innerHTML = sumNote / contNotes;
+    } else {
+      alert(
+        "No estás ingresando notas, por favor ingresa una nota para continuar"
+      );
+    }
+  }
 }
 
+function fillNotes(note) {
+  document.querySelector(".table tbody tr").innerHTML += `<td>${note}</td>`;
+  document.querySelector(".input-note").value = "";
+}
